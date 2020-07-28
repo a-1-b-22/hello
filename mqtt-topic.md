@@ -1,9 +1,10 @@
 ## 一、未注册设备 topic
    * app/[companyID]/unbinded/[roomID]/[tx|rx]
+   
    unite主机未绑定到一个具体会议室时，通过该主题与server进行通讯，server通过该主题获得已连接到该company，但尚未绑定的unite主机。
    server通过向unite主机发送绑定消息实现unite主机与会议室的绑定，绑定后unite主机【已注册设备topic】与主机进行通讯。
    
-### * 主机join消息
+### 主机join消息
 ```    
 {
     "company":"companyID", //
@@ -14,7 +15,7 @@
 }
 ```  
 
-### * server bind消息
+### server bind消息
     server向主机发布bind消息，实现unite主机与会议室的绑定
     
 ## 二、已注册设备 mqtt topic

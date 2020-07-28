@@ -12,8 +12,8 @@
 ## 三、unite主机发布的消息类型（mqtt消息内容的类型）
     unite主机向app/[companyID]/rooms/[roomID]/event/tx发布的消息，服务器接收并处理
     
-###1. 主机相关消息
-####1.1 unite主机online消息, 设备连接到mqtt server时发送online消息
+### 1. 主机相关消息
+#### 1.1 unite主机online消息, 设备连接到mqtt server时发送online消息
 ```    
 {
     "company":"companyID",
@@ -23,7 +23,7 @@
     ”version":1.0,
 }
 ```    
-####1.2 unite主机 heartbeat消息， unite主机连接到mqtt server后， 每分钟发一次心跳消息。
+#### 1.2 unite主机 heartbeat消息， unite主机连接到mqtt server后， 每分钟发一次心跳消息。
 ```
 {
     "company":"companyID",
@@ -34,8 +34,8 @@
 }
 ```    
     
-###2. 设备相关消息
-####2.1 人感设备 消息
+### 2. 设备相关消息
+#### 2.1 人感设备 消息
 ```
 {
      "company":"companyID",
@@ -46,7 +46,7 @@
 }
 ```
       
-####2.2 插座设备 消息
+#### 2.2 插座设备 消息
 ```       
 {
      "company":"companyID",

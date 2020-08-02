@@ -2,7 +2,7 @@
    * hub/company/[companyID]/unbinded/[roomID]/[tx|rx]
    
    unite主机未绑定到一个具体会议室时，通过该主题与server进行通讯，server通过该主题获得已连接到该company，但尚未绑定的unite主机。
-   server通过向unite主机发送绑定消息实现unite主机与会议室的绑定，绑定后unite主机【已注册设备topic】与主机进行通讯。
+   server通过向unite主机发送绑定消息实现unite主机与会议室的绑定，绑定后unite主机通过【已注册设备topic】与主机进行通讯。
    
 ### 主机join消息
 ```    
@@ -16,6 +16,14 @@
 
 ### server bind消息
     server向主机发布bind消息，实现unite主机与会议室的绑定
+```    
+{
+    "company":"companyID", //
+    "room":"roomID",      //server分配的roomID
+    "type": "bind",      //消息类型，join
+    ”version":1.0,
+}
+``` 
     
 ## 二、已注册设备 mqtt topic
    hub/company/[companyID]/rooms/[roomID]/event/[tx|rx]
@@ -75,4 +83,5 @@
      ”state":"on|off"   //消息内容，on：打开，off：关闭
 }
 ```    
+   
    
